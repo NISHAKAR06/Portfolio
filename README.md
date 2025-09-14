@@ -90,7 +90,7 @@ Portfolio/
 
 ## 🌐 Deployment
 
-This project is deployed on Vercel, Netlify. You can view the live version at [Your Portfolio URL].
+This project is deployed on Vercel, Netlify. You can view the live version at [https://portfolio-nishakar.vercel.app/](https://portfolio-nishakar.vercel.app/).
 
 ## 📧 Contact
 
