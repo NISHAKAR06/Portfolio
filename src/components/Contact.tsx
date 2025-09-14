@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,6 +20,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const form = useRef<HTMLFormElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -28,19 +30,40 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setIsSubmitting(false);
-    }, 1000);
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_lo8imkt",
+          "template_x9eesjg",
+          form.current,
+          "Xn0hTaK5e_7SyDkB4"
+        )
+        .then(
+          () => {
+            toast({
+              title: "Message Sent Successfully!",
+              description:
+                "Thank you for your message. I'll get back to you soon.",
+            });
+            setFormData({ name: "", email: "", subject: "", message: "" });
+            setIsSubmitting(false);
+          },
+          (error) => {
+            toast({
+              title: "Failed to Send Message",
+              description:
+                "An error occurred while sending your message. Please try again later.",
+              variant: "destructive",
+            });
+            setIsSubmitting(false);
+            console.error("EmailJS Error:", error);
+          }
+        );
+    }
   };
 
   const contactInfo = [
@@ -162,7 +185,7 @@ const Contact = () => {
           <Card className="portfolio-card animate-fade-in">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
