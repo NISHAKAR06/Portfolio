@@ -80,9 +80,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex justify-center items-center text-sm text-muted-foreground">
           <div className="flex items-center space-x-1">
-            <span>© {currentYear} NISHAKAR T, Built with</span>
-            <Heart className="w-4 h-4 text-red-500" />
-            <span>and React</span>
+            <span>© {currentYear} NISHAKAR T </span>
           </div>
         </div>
       </div>
