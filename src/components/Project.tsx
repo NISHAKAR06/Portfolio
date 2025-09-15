@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Star } from "lucide-react";
 
-const Portfolio = () => {
+const Project = () => {
   const featuredProjects = [
     {
       title: "VoiceFusion AI",
@@ -52,7 +52,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="project" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4">
@@ -183,4 +183,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Project;

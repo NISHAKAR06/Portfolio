@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Brain, Code, Zap, ArrowRight } from "lucide-react";
 
-const Services = () => {
+const Expertise = () => {
   const services = [
     {
       title: "AI Model Building",
@@ -59,11 +59,11 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="expertise" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gradient mb-4">
-            Services
+            Expertise
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Comprehensive AI and development services to bring your ideas to life
@@ -133,4 +133,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Expertise;
