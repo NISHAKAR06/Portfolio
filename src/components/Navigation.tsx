@@ -8,8 +8,10 @@ const Navigation = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
     if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
       setIsDark(true);
       document.documentElement.classList.add("dark");
@@ -49,9 +51,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="font-bold text-xl text-gradient">
-            Nishakar T
-          </div>
+          <div className="font-bold text-xl text-gradient">Nishakar T</div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -74,7 +74,11 @@ const Navigation = () => {
               onClick={toggleTheme}
               className="hover-lift"
             >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {isDark ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
             </Button>
 
             {/* Mobile Menu Button */}
@@ -84,7 +88,11 @@ const Navigation = () => {
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>

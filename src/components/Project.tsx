@@ -5,50 +5,78 @@ import { Github, ExternalLink, Star } from "lucide-react";
 const Project = () => {
   const featuredProjects = [
     {
+      title: "AI-Powered Mental Wellness Platform",
+      description:
+        "AI-driven mental wellness platform for Indian youth, offering confidential, real-time AI voice sessions with 3D AI psychologist avatars that specialize in areas like academic stress and career anxiety, providing empathetic, personalized support.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Django",
+        "FastAPI",
+        "PostgreSQL",
+        "Google Gemini AI",
+      ],
+      features: [
+        "Real-time AI voice sessions",
+        "3D AI psychologist avatars",
+        "Emotion analysis and support",
+        "Confidential mental health support",
+        "Stigma-free access for Indian youth",
+      ],
+      githubUrl: "https://github.com/NISHAKAR06/Mental_Wellness_AI",
+      demoUrl: "https://mentalwellnessai.vercel.app/",
+      status: "AI/ML",
+      gradient: "from-primary to-accent",
+    },
+    {
       title: "VoiceFusion AI",
-      description: "AI-powered video dubbing system with Hindi lip-sync technology. Advanced neural networks for accurate voice synthesis and facial animation synchronization.",
+      description:
+        "AI-powered video dubbing system with Hindi lip-sync technology. Advanced neural networks for accurate voice synthesis and facial animation synchronization.",
       technologies: ["Python", "TensorFlow", "OpenCV", "Deep Learning", "NLP"],
       features: [
         "Real-time lip-sync generation",
         "Multi-language voice synthesis",
         "Facial animation mapping",
-        "Advanced neural networks"
+        "Advanced neural networks",
       ],
       githubUrl: "https://github.com/NISHAKAR06/VoiceFusionAi-ML",
       demoUrl: "#",
       status: "Featured",
-      gradient: "from-primary to-accent"
+      gradient: "from-accent to-success",
     },
     {
       title: "6-Axis Robotic Arm Control",
-      description: "Real-time robotic control system with web interface. Built using React, Django, and WebSockets for seamless robot-human interaction.",
+      description:
+        "Real-time robotic control system with web interface. Built using React, Django, and WebSockets for seamless robot-human interaction.",
       technologies: ["React.js", "Django", "WebSockets", "Python", "Robotics"],
       features: [
         "Real-time control interface",
         "WebSocket communication",
         "3D visualization",
-        "Safety protocols integration"
+        "Safety protocols integration",
       ],
       githubUrl: "https://github.com/MITHRAN-BALACHANDER/6-axis",
       demoUrl: "#",
       status: "Engineering",
-      gradient: "from-accent to-success"
+      gradient: "from-accent to-success",
     },
     {
       title: "AI Scholarship Portal",
-      description: "Full-stack scholarship approval and monitoring system with Flask, MongoDB, and secure authentication. Intelligent matching algorithms for scholarship recommendations.",
+      description:
+        "Full-stack scholarship approval and monitoring system with Flask, MongoDB, and secure authentication. Intelligent matching algorithms for scholarship recommendations.",
       technologies: ["Flask", "MongoDB", "React", "Python", "Machine Learning"],
       features: [
         "Intelligent matching system",
         "Secure authentication",
         "Real-time monitoring",
-        "Automated approval workflows"
+        "Automated approval workflows",
       ],
-      githubUrl: "https://github.com/NISHAKAR06/AI-POWERED-SCHOLARSHIP-APPROVAL-AND-MONITORING-SYSTEM-FOR-PMSSS",
+      githubUrl:
+        "https://github.com/NISHAKAR06/AI-POWERED-SCHOLARSHIP-APPROVAL-AND-MONITORING-SYSTEM-FOR-PMSSS",
       demoUrl: "#",
       status: "Full-Stack",
-      gradient: "from-success to-primary"
-    }
+      gradient: "from-success to-primary",
+    },
   ];
 
   return (

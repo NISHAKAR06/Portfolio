@@ -44,7 +44,8 @@ const Skills = () => {
     {
       title: "Cloud & DevOps",
       icon: Server,
-      skills: ["AWS", "Google Cloud", "Azure", "Vercel"],
+      skills: ["AWS", "Google Cloud", "Azure", "Vercel","Render",
+        "Railway"],
       color: "text-accent",
       bgColor: "bg-accent/10"
     },
